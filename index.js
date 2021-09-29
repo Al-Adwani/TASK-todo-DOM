@@ -9,6 +9,8 @@ let categories = [];
 tasks = [
   { id: 0, title: "Game of thrones", category: "Movies", done: false },
   { id: 1, title: "Toy Story 4", category: "Movies", done: false },
+  { id: 2, title: "Toy Story 3", category: "Movies", done: true },
+
 ];
 
 categories = ["Movies", "Groceries"];
@@ -16,6 +18,7 @@ categories = ["Movies", "Groceries"];
 renderCategories(categories, CATEGORY_SELECTOR);
 renderCategories(categories, CATEGORY_FILTER);
 renderTasks(tasks, "tasks-list");
+
 
 function taskChecked(taskId, checked) {
   // implement the delete task.
@@ -26,8 +29,10 @@ function taskChecked(taskId, checked) {
 function addTask() {
   const selectedCategory = getSelectedCategoryById(CATEGORY_SELECTOR);
   const taskTitle = getNewTaskText();
-  // continue the code here
-  alert(`Category: ${selectedCategory} | Task: ${taskTitle}`);
+  tasks.push({id:(tasks.length), title: taskTitle, category: selectedCategory, done: false })
+  renderTasks(tasks, "tasks-list");
+
+  
 }
 
 function addCategory() {
