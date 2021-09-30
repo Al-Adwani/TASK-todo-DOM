@@ -19,8 +19,11 @@ renderCategories(categories, CATEGORY_FILTER);
 renderTasks(tasks, "tasks-list");
 
 function taskChecked(taskId, checked) {
-  tasks[taskId].done = checked;
-  renderTasks(tasks, "tasks-list");
+  //tasks[taskId].done = checked;
+  
+  tasks.find(element => element.id === taskId).done = checked;
+  
+  
 }
 
 function addTask() {
@@ -47,7 +50,12 @@ function addCategory() {
 function filterTasks() {
   const selectedCategory = getSelectedCategoryById(CATEGORY_FILTER);
   const done = getFilteredDone();
+  
+  let taskStatus =tasks.filter(element => (element.category === selectedCategory && element.done === done))
+  
+  renderTasks(taskStatus, "tasks-list");
+  console.log(taskStatus)
   // continue the code here
   // REMOVE ME: sample alert
-  alert(`Category: ${selectedCategory} | done: ${done}`);
+  //alert(`Category: ${selectedCategory} | done: ${done}`);
 }
