@@ -1,3 +1,79 @@
 .todo-item {
   display: flex;
 }
+body {
+  background: rgb(77, 34, 195);
+  background: linear-gradient(
+    90deg,
+    rgb(37, 34, 195) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
+button {
+  display: block;
+  position: relative;
+  margin: 0.5em 0;
+  padding: 0.8em 2.2em;
+  cursor: pointer;
+
+  background: #ffffff;
+  border: 100px;
+  border-radius: 50em;
+
+  text-transform: uppercase;
+  font-size: 1em;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  font-weight: 500px;
+
+  mix-blend-mode: color-dodge;
+  perspective: 500px;
+}
+.heading {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  display: block;
+  color: rgb(233, 255, 39);
+}
+.selectTag {
+  width: 18.9%;
+  height: 25px;
+  display: block;
+  cursor: pointer;
+  box-shadow: 0 1px 3px -2px #9098a9;
+}
+label {
+  color: yellow;
+}
+.yellowDiv {
+  display: inline block;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  background-color: transparent;
+  font-weight: bolder;
+  font-size: 25px;
+  padding: 50px;
+  color: yellow;
+  overflow-y: auto;
+  float: left;
+}
+.checkBox {
+  left: 0;
+  top: 0;
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid #aaa;
+  background: #fff;
+  border-radius: 0.2em;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0;
+}
